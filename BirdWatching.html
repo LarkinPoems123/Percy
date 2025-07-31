@@ -11,22 +11,47 @@ img {
     display: block;
     margin: auto;
     }
+    
 p {
     font-size: 50;
     font-family: Arial, Helvetica, sans-serif;
     color: white;
 }
+    
 li {
     font-family: Arial, Helvetica, sans-serif;
     color: white;
 }
+    
 body {
     background-color: #228B22;
 }
+    
 h2 {
     color: white;
 }
+
+  #button {
+      display: none;
+      position: fixed;
+      bottom: 20px;
+      right: 30px;
+      z-index: 99;
+      border: none;
+      outline: none;
+      background-color: blue;
+      color: red;
+      cursor: pointer;
+      padding: 15px;
+      border-radius: 10px;
+      font-size: 18px
+  }
+
+  #button:hover {
+      background-color: #555;
+  }
 </style>
+<meta name="viewport" content="width=device-width, inital-scale=1.0">
 <title>BirdWatching</title>
 </head>
 
@@ -34,6 +59,7 @@ h2 {
 <img src="https://images.unsplash.com/photo-1606567595334-d39972c85dbe?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8YmlyZHxlbnwwfHwwfHx8MA%3D%3D" alt= "European Robin" width= "300" height="200">
 
 <body>
+<button onclick="topFunction()" id="button" title="Back to Top">Go Back to Top</button>
 <h2>What is BirdWatching?</h2>
     
     <p>Birdwatching is a recreational activity that means going outside and
@@ -71,7 +97,25 @@ h2 {
     <p>This project is actaully for fun and i just want to show everybody in my school, in my home or the internet. Since if i reveal my name, the weirdos on this internet will find me, i will use a fake name. (If you are a teacher, please don't say it) My name is Mike Rotch and also, i will not use my real face so i just put House MD image as my face. If you see a house md profile picture with the name being "Mike Rotch" or my real name, that is me.</p>
     <img src="https://blogcritics.org/wp-content/uploads/2014/06/house.jpg" alt="House MD staring" width="500" height="300"> 
 
-    
+ <script>
+let button = document.getElementbyId("button");
+
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+    if (document.body.scrollTop > 20 ||
+document.documentElement.scrollTop > 20) {
+    button.style.display = "block";
+    } else {
+        mybutton.style.display = "none;
+    }
+}
+
+function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+}
+ </script>
 </body>
 <h2>Credits</h2>
 <p>For the dam photographers</p><a href="https://commons.wikimedia.org/wiki/File:Conowingo_dam_shooters_fishing_pier_(14106368940).jpg">Russ</a>, <a href="https://creativecommons.org/licenses/by/2.0">CC BY 2.0</a>, via Wikimedia Commons
