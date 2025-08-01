@@ -79,6 +79,10 @@ h2 {
 
     <script>
     let mybutton = document.getElementById("myButton");
+
+    window.onscroll = function() {scrollFunction()};
+
+    function scrollFunction() {
         if (document.body.scrolltop > 20 ||
     document.documentElement.scrollTop > 20) {
             mybutton.style.display = "block";
